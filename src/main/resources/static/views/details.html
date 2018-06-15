@@ -1,0 +1,38 @@
+<head>
+<meta charset="utf-8"/>
+</head>
+<body ng-app="myApp" ng-controller="DetailsController">
+
+ <div class="col-md-6 col-sm-6 spacer">
+        <table class="table table-striped">
+			<thead>
+				<tr>
+				  <th>photo</th><th>description</th><th>Type</th>
+				</tr>
+			</thead>
+			<tbody>
+			    <tr>
+				  <td>{{details.path_photo}}</td>
+				  <td>{{details.description}}</td>
+				  <td>{{details.type}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br><br>
+		 <table class="table table-striped">
+			<thead>
+				<tr>
+				  <th>date de reservations</th>
+				</tr>
+			</thead>
+			<tbody>
+			    <tr>
+				  <td>{{details.reservations[0]|date:'dd/MM/yyyy'}} </td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<button class="btn btn-primary">Réserver</button>
+     </div>
+
+</body>

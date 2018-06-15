@@ -1,0 +1,43 @@
+<head>
+<meta charset="utf-8"/>
+</head>
+<body ng-app="myApp" ng-controller="TerrainController">
+     <div class="col-md-6 col-sm-6 spacer">
+        <table class="table table-striped">
+			<thead>
+				<tr>
+				  <th>date</th><th>time</th><th></th>
+				</tr>
+			</thead>
+			<tbody>
+			    <tr ng-repeat="e in disponibility">
+				  <td>{{e.dateres}}</td>
+				  <td>{{e.timeres}}</td>
+				  <td><button ng-click="Reserver(e.idterrain)" id="B1" data-toggle="modal" data-target="">Reserver</button></td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+    <!-- Modal -->
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Message</h4>
+        </div>
+        <div class="modal-body">
+          <p>Vous devez vous connectez affin de passer une reservation</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</body>

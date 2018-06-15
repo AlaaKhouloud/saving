@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>City Foot</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+    <!-- GOOGLE FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700" rel='stylesheet' type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600" rel='stylesheet' type="text/css">
+    <!-- /GOOGLE FONTS -->
+    <link rel="stylesheet" href="css/bootstrap.css" th:href="@{css/bootstrap.css}">
+    <link rel="stylesheet" href="css/font-awesome.css" th:href="@{css/font-awesome.css}">
+    <link rel="stylesheet" href="css/icomoon.css" th:href="@{css/icomoon.css}">
+    <link rel="stylesheet" href="css/styles.css" th:href="@{css/styles.css}">
+    <link rel="stylesheet" href="css/mystyles.css" th:href="@{css/mystyles.css}">
+    
+    <script src="js/modernizr.js" th:src="@{js/modernizr.js}"></script>
+
+	<script type="text/javascript" src="js/angular.min.js" th:src="@{js/angular.min.js}"></script>
+	<script type="text/javascript" src="js/myApp.js" th:src="@{js/myApp.js}"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-cookies.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/jquery.js" th:src="@{js/jquery.js}"></script>
+	<script type="text/javascript" src="js/scroll.js" th:src="@{js/jquery.js}"></script>
+	<script type="text/javascript" src="js/slide.js" th:src="@{js/jquery.js}"></script>
+	<!-- Social Buttons for Bootstrap -->
+    <link href="css/assets/docs.css" rel="stylesheet" >
+    <link href="css/assets/bootstrap-social.css" rel="stylesheet" >
+    <!-- /Social Buttons for Bootstrap -->
+
+</head>
+<body ng-app="myApp" ng-controller="FirstController">
+
+ <div class="global-wrap">
+        <header id="main-header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a class="logo" href="#">
+                            	<img src="img/logoFoot2.jpg" alt="Image Alternative text" title="Image Title" />
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-md-offset-2">
+                            <form class="main-header-search">
+                                <div class="form-group form-group-icon-left">
+                                    <i class="fa fa-search input-icon"></i>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="top-user-area clearfix">
+                                <ul class="top-user-area-list list list-horizontal list-border">
+                                    <li ng-if="mode==1" class="top-user-area-avatar" >
+                                        <a href="#">
+                                            <img class="origin round" ng-src="{{g_image}}" alt="Image Alternative text" title="AMaze" />{{username}}</a>
+                                    </li>
+                                    <li ng-if="mode==1" ><a ng-href="#" ng-click="logout()">Se déconnecter</a>
+                                    </li>
+                                    <li ng-if="mode==2"><a  class="slide-section" href="#connect">Se Connecter</a><li>
+                                    <li ng-if="mode==2"><a class="slide-section" href="#connect">S'inscrire</a><li>
+                                    
+                                    <li class="top-user-area-lang nav-drop">
+                                    	<a href="#">
+                                            <img src="img/flags/32/fr.png" alt="Image Alternative text" title="Image Title" />FR<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                        </a>
+                                        
+                                        <ul class="list nav-drop-menu">
+                                            <li>
+                                                <a title="French" href="#">
+                                           			<img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" /><span class="right">EN</span>
+                                        		</a>
+                                            </li>
+                                            <li>
+                                                <a title="Arabic" href="#">
+                                                    <img src="img/flags/32/ma.png" alt="Image Alternative text" title="Image Title" /><span class="right">AR</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nav">
+                    <ul class="slimmenu" id="slimmenu">
+                        <li class="active"><a ng-href="http://localhost:5454/#!/">Acceuil</a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:5454/#!/presentation">Présentation</a>
+                           
+                        </li>
+                        <li><a href="#">Offres & Tarifs</a>
+                            <ul>
+                                <li><a href="#">Location de terrains</a>
+                                </li>
+                                <li><a href="#">Abonnements</a>
+                                </li>
+                                <li><a href="#">Championnat</a>
+                                </li>
+                                <li><a href="#">Anniversaires & Goûters</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Evénements</a>
+                            
+                        </li>
+                        <li><a href="#">Espace Entreprises</a>
+                            
+                        </li>
+                        <li><a href="#">Contact</a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+     
+        <!-- TOP AREA -->
+        <div class="top-area show-onload">
+            <div class="bg-holder full">
+                <div class="bg-front full-height bg-front-mob-rel">
+                    <div class="container full-height">
+                        <div class="rel full-height">
+                            <div class="tagline visible-lg" id="tagline"><span>Il est temps de</span>
+                                <ul>
+                                    <li>vivre</li>
+                                    <li>s'amuser</li>
+                                    <li>se détendre</li>
+                                    <li>rencontrer</li>
+                                    <li>se retrouver</li>
+                                    <li>s'enfuir</li>
+                                    <li>d'explorer</li>
+                                    <li class="active">découvrir</li>
+                                    <li>jouer</li>
+                                </ul>
+                            </div>
+                            <div class="search-tabs search-tabs-bg search-tabs-bottom mb50">
+                                <div class="tabbable">
+                                    <ul class="nav nav-tabs" id="myTab">
+                                        <li class="active"><a href="#tab-1" data-toggle="tab"><i class="fa fa-calendar-o input-icon"></i> <span >Réservation</span></a>
+                                        </li>
+                                        <li><a href="#tab-2" data-toggle="tab"><i class="fa fa-group"></i> <span >Trouver des joueurs</span></a>                                        </li>
+                                        
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active" id="tab-1">
+                                            <h2>Constituez vos équipes et venez vous affronter</h2>
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa  fa-dribbble input-icon"></i>
+                                                            <label>Terrain de</label>
+                                                            <select class="form-control" ng-model="type" ng-required="true" placeholder="Choisissez un terrain">
+                                                                     <option  ng-repeat="e in types">{{e}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                     <div class="row">
+                                                         <div class="col-md-4">
+                                                            <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
+                                                            <label>Date</label>
+                                                            <input class="form-control" ng-required="true" name="start" type="date"  ng-model="dateres"/>
+                                                             </div>
+                                                         </div>
+                                                      </div>
+                                                     </div>
+                                                    </div>
+                                                <button class="btn btn-primary btn-lg" ng-click="Search(dateres)"><i class="fa fa-search input-icon"></i>Rechercher des créneaux disponnibles</button>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab-2">
+                                            <h2>Recherche de partenaires, adversaires où équipes</h2>
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa  fa-dribbble input-icon"></i>
+                                                           <label>Terrain de</label>
+                                                            <select class="form-control" ng-model="type" placeholder="Foot">
+                                                                            <option  ng-repeat="e in types">{{e}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="input-daterange" data-date-format="M d, D">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
+                                                                        <label>Date</label>
+                                                                        <input class="form-control" name="s" type="text" />
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group form-group-lg form-group-select-plus">
+                                                                        <label>Joueurs</label>
+                                                                        <div class="btn-group btn-group-select-num" data-toggle="buttons">
+                                                                            <label class="btn btn-primary active">
+                                                                                <input type="radio" name="options" />1</label>
+                                                                            <label class="btn btn-primary">
+                                                                                <input type="radio" name="options" />2</label>
+                                                                            <label class="btn btn-primary">
+                                                                                <input type="radio" name="options" />3</label>
+                                                                            <label class="btn btn-primary">
+                                                                                <input type="radio" name="options" />3+</label>
+                                                                        </div>
+                                                                        <select class="form-control hidden">
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                            <option>3</option>
+                                                                            <option selected="selected">4</option>
+                                                                            <option>5</option>
+                                                                            <option>6</option>
+                                                                            <option>7</option>
+                                                                            <option>8</option>
+                                                                            <option>9</option>
+                                                                            <option>10</option>
+                                                                            <option>11</option>
+                                                                            <option>12</option>
+                                                                            <option>13</option>
+                                                                            <option>14</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary btn-lg" type="submit"><i class="fa fa-search input-icon"></i>Rechercher des joueurs</button>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="owl-carousel owl-slider owl-carousel-area visible-lg" id="owl-carousel-slider" data-nav="false">
+                    <div class="bg-holder full">
+                        <div class="bg-mask"></div>
+                        <div class="bg-img" style="background-image:url(img/1.jpg);"></div>
+                    </div>
+                    <div class="bg-holder full">
+                        <div class="bg-mask"></div>
+                        <div class="bg-img" style="background-image:url(img/6.jpg);"></div>
+                    </div>
+                    <div class="bg-holder full">
+                        <div class="bg-mask"></div>
+                        <div class="bg-img" style="background-image:url(img/2.jpg);"></div>
+                    </div>
+                    <div class="bg-holder full">
+                        <div class="bg-mask"></div>
+                        <div class="bg-img" style="background-image:url(img/8.jpg);"></div>
+                    </div>
+                </div>
+                <div class="bg-img hidden-lg" style="background-image:url(img/7.jpg);"></div>
+                <div class="bg-mask hidden-lg"></div>
+            </div>
+        </div>
+  
+        <!-- END TOP AREA  -->
+
+        </div>
+            <div class="gap"></div>
+        </div>
+               
+        <!-- Add Pages via angular JS -->
+        <div ng-view></div>
+        <div ng-include="'views/header.html'"></div>
+ 
+       <div class="gap gap-small"  ng-if="mode==2"></div>
+            <div class="bg-holder connect" id='connect' name='connect' style="height:600px !important;" ng-if="mode==2">
+                <div class="bg-mask"></div>
+                <div class="bg-img" style="background-image:url(img/6.jpg);"></div>
+                <div class="bg-holder-content full text-white">
+                    <a class="logo-holder" href="index.html">
+                        <img src="img/logoFoot.jpg" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                    <div class="full-center">
+                        <div class="container">
+                            <div class="row row-wrap" data-gutter="60">
+                                <div class="col-md-4">
+          
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h3 class="mb15">S'identifier</h3>
+                                    
+                                    <a class="btn btn-block btn-social btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);" ng-click="onGoogleLogin()">
+                                        <span class="fa fa-google"></span> Avec Google
+                                    </a>
+                                    <a class="btn btn-block btn-social btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);" ng-click="onFBLogin()">
+                                        <span class="fa fa-facebook"></span> Avec Facebook
+                                    </a>
+                                    <br />
+                                    <h4></h4>
+                                    <h4 class="mb15"><b>Avec Email où Téléphone</b></h4>
+                                    <form>
+                                       <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
+                                            <label>Email</label>
+                                            <input class="form-control" type="text" placeholder="exemple@xyz.com" ng-model="visiteur.telemail" required/>
+                                            <span class="error" ng-if="errorE==1">expected valid email or phone number</span>
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
+                                            <label>Mot de passe</label>
+                                            <input class="form-control" type="password" placeholder="Mon mot de passe secret" ng-model="visiteur.pass" required/>
+                                        </div>
+                                        <input class="btn btn-primary" ng-click="connexion()" value="S'identifier" />
+                                        <span style="colo:red" ng-if="notfound==true">Compte introuvable</span>
+                                        <span style="colo:red" ng-if="reqinputs">Veuillez fournir tous les champs</span>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3 class="mb15">Nouveau Champion</h3>
+                                    <form>
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
+                                            <label>Nom Complet</label>
+                                            <input ng-model="visiteur.nom_prenom" name="non" class="form-control" placeholder="Par ex. Amine Zakki" type="text" required/>
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-envelope input-icon input-icon-show"></i>
+                                            <label>Email</label>
+                                            <input ng-model="visiteur.email" name="mail" class="form-control" placeholder="mail@gmail.com" type="text"  required/>
+                                            <span class="error" ng-if="errorEm==1">Invalid Email</span>
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-envelope input-icon input-icon-show"></i>
+                                            <label>Téléphone</label>
+                                            <input ng-model="visiteur.telephone" name="tel" class="form-control" placeholder="06666666" type="text"  required/>
+                                            <span class="error" ng-if="errorM==1">Invalid Phone Number</span>
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
+                                            <label>Mot de passe</label>
+                                            <input ng-model="visiteur.password" name="pass" class="form-control" type="password" placeholder="Mon mot de passe secret"  required />
+                                        </div>
+                                        <input class="btn btn-primary" ng-click="inscription()" value="S'inscrire" /><br/>
+                                        <span style="colo:red" ng-if="found">A user is already logged with this email</span>
+                                        <span style="colo:red" ng-if="message!=null">{{message}}</span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        
+        </div>
+            <div></div>
+       </div>
+       
+        <footer id="main-footer">
+            <div class="container">
+                <div class="row row-wrap">
+                    <div class="col-md-3">
+                        <a class="logo" href="index.html">
+                            <img src="img/logoFoot3.jpg" alt="Image Alternative text" title="Image Title" />
+                        </a>
+                        <p class="mb20">City Foot 5 propose un nouveau concept de mini foot en plein cœur de Casablanca pour ravir votre plaisir du football en milieu urbain au travers de sa qualité de service et de ses infrastructures dernière génération !</p>
+                        <ul class="list list-horizontal list-space">
+                            <li>
+                                <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-twitter box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-google-plus box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-linkedin box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-pinterest box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4>Newsletter</h4>
+                        <form>
+                            <label>Enterez votre Adresse e-mail</label>
+                            <input ng-model="abos.em" type="text" class="form-control" />
+                            <p class="mt5"><small>*Nous n'envoyons jamais de spam</small>
+                            </p>
+                            <input ng-click="abonner()" class="btn btn-primary" value="S'abonner">
+                            <span style="colo:red" ng-if="exist">You are already following us</span>
+                            <span style="colo:red" ng-if="success">Thank you!</span>
+                            <span style="colo:red" ng-if="errorreg">Email invalide</span>
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="list list-footer">
+                            <li><a href="#">À propos de nous</a>
+                            </li>
+                            <li><a href="#">Nos Offres et Tarifs</a>
+                            </li>
+                            <li><a href="#">Presse</a>
+                            </li>
+                            <li><a href="#">Emplois</a>
+                            </li>
+                            <li><a href="#">Mentions légales</a>
+                            </li>
+                            <li><a href="#">Politique de confidentialité</a>
+                            </li>
+                            <li><a href="#">Conditions d'utilisation</a>
+                            </li>
+                            <li><a href="#">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                    	<h4>Rendez-nous visite !</h4>
+                    	<h4 class="text-color">Route de l'Oasis, 22100 Casablanca</h4>
+                        <h4>Des questions ?</h4>
+                        <h4 class="text-color">Tél : 05 22 99 44 98</h4>
+                        <h4 class="text-color">Fax : 05 22 99 68 85</h4>
+                        <h4><a href="#" class="text-color">support@cityfoot.com</a></h4>
+                        <p>Support Client Disponible 24/7 </p>
+                    </div>
+ 
+            </div>
+        </footer>
+
+        
+        <script src="js/bootstrap.js" th:src="@{js/bootstrap.js}"></script>
+        <script src="js/slimmenu.js" th:src="@{js/slimmenu.js}"></script>
+        <script src="js/bootstrap-datepicker.js" th:src="@{js/bootstrap-datepicker.js}"></script>
+        <script src="js/bootstrap-timepicker.js" th:src="@{js/bootstrap-timepicker.js}"></script>
+        <script src="js/nicescroll.js" th:src="@{js/nicescroll.js}"></script>
+        <script src="js/dropit.js" th:src="@{js/dropit.js}"></script>
+        <script src="js/ionrangeslider.js" th:src="@{js/ionrangeslider.js}"></script>
+        <script src="js/icheck.js" th:src="@{js/icheck.js}"></script>
+        <script src="js/fotorama.js" th:src="@{js/fotorama.js}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script src="js/typeahead.js" th:src="@{js/typeahead.js}"></script>
+        <script src="js/card-payment.js" th:src="@{js/card-payment.js}"></script>
+        <script src="js/magnific.js" th:src="@{js/magnific.js}"></script>
+        <script src="js/owl-carousel.js" th:src="@{js/owl-carousel.js}"></script>
+        <script src="js/fitvids.js" th:src="@{js/fitvids.js}"></script>
+        <script src="js/tweet.js" th:src="@{js/tweet.js}"></script>
+        <script src="js/countdown.js" th:src="@{js/countdown.js}"></script>
+        <script src="js/gridrotator.js" th:src="@{js/gridrotator.js}"></script>
+        <script src="js/custom.js" th:src="@{js/custom.js}"></script>
+        <script type="text/javascript" src="js/appScript.js" th:src="@{js/appScript.js}"></script>
+				   
+				   <script>// <![CDATA[
+				    (function() {
+				        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				        po.src = 'https://apis.google.com/js/client:plusone.js';
+				        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				    })();
+				   // ]]></script>
+</body>
+</html>
+
+
